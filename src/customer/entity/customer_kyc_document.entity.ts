@@ -13,15 +13,10 @@ export class CustomerKycDocument {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-
-
     @ManyToOne(()=> Customer , (customer)=>customer.kycDocuments , { onDelete : "CASCADE"} )
     customer : Customer
 
-    @Column({
-        type: 'enum',
-        enum: KycDocumentType,
-    })
+    @Column({type: 'enum',enum: KycDocumentType})
     documentType: KycDocumentType;
 
     @Column({ name: 'document_path' })

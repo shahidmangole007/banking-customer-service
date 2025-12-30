@@ -42,11 +42,7 @@ export class Customer {
     @Column({ length: 4, nullable: true })
     aadhaarLast4: string;
 
-    @Column({
-        type: 'enum',
-        enum: KycStatus,
-        default: KycStatus.PENDING,
-    })
+    @Column({ type: 'enum', enum: KycStatus, default: KycStatus.PENDING})
     kycStatus: KycStatus;
 
     @Column({type: 'enum', enum: CustomerStatus,default: CustomerStatus.ACTIVE})
