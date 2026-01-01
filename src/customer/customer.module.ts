@@ -5,9 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Customer } from './entity/customers.entity';
 import { CustomerKycDocument } from './entity/customer_kyc_document.entity';
 import { CustomerAddress } from './entity/customer_addresses.entity';
+import { CloudService } from 'src/services/cloud-service/cloud-service.service';
 
 @Module({
-  providers: [CustomerService],
+  providers: [CustomerService, CloudService],
   imports : [TypeOrmModule.forFeature([Customer , CustomerKycDocument , CustomerAddress])],
   exports : [CustomerService]
   

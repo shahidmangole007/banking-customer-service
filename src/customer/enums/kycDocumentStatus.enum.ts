@@ -1,7 +1,7 @@
 export enum KycDocumentType {
   PAN = 'PAN',
   AADHAAR = 'AADHAAR',
-  ADDRESS_PROOF = 'ADDRESS_PROOF',
+  PHOTO = 'PHOTO',
 }
 
 export enum KycDocumentStatus {
@@ -9,3 +9,4 @@ export enum KycDocumentStatus {
   VERIFIED = 'VERIFIED',
   REJECTED = 'REJECTED',
 }
+

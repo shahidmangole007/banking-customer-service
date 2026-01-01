@@ -5,11 +5,12 @@ import { CustomerController } from './customer/customer.controller';
 import { CustomerModule } from './customer/customer.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CloudService } from './services/cloud-service/cloud-service.service';
 
 @Module({
   
   controllers: [AppController, CustomerController],
-  providers: [AppService],
+  providers: [AppService , CloudService],
     imports: [ 
     CustomerModule, 
       

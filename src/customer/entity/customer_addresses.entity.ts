@@ -15,9 +15,6 @@ export class CustomerAddress {
     @JoinColumn({ name: "customer_id" })
     customer: Customer;
 
-    @Column()
-    customerId: string;
-
     @Column() 
     addressType: AddressType;
 
@@ -33,7 +30,7 @@ export class CustomerAddress {
     @Column({ length: 50 })
     state: string;
 
-    @Column({ length: 10 })
+    @Column({ })
     pincode: string;
 
     @Column({ length: 50 })
